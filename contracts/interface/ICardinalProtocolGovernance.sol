@@ -4,6 +4,7 @@ pragma solidity ^0.8.10;
 
 /**
 * @title ICardinalProtocolGovernance
+* @author harpoonjs.eth
 */
 interface ICardinalProtocolGovernance 
 {

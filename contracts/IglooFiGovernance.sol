@@ -4,25 +4,25 @@ pragma solidity ^0.8.10;
 
 import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 
-import "./interface/ICardinalProtocolGovernance.sol";
+import "./interface/IIglooFiGovernance.sol";
 
 
 /**
-* @title CardinalProtocolGovernance
+* @title Igloo Fi Governance
 * @author harpoonjs.eth
 */
-contract CardinalProtocolGovernance is
+contract IglooFiGovernance is
 	AccessControlEnumerable,
-	ICardinalProtocolGovernance
+	IIglooFiGovernance
 {
 	/* [state-variables] */
-	/// @inheritdoc ICardinalProtocolGovernance
+	/// @inheritdoc IIglooFiGovernance
 	bytes32 public constant S = keccak256("S");
-	/// @inheritdoc ICardinalProtocolGovernance
+	/// @inheritdoc IIglooFiGovernance
 	bytes32 public constant A = keccak256("A");
-	/// @inheritdoc ICardinalProtocolGovernance
+	/// @inheritdoc IIglooFiGovernance
 	bytes32 public constant B = keccak256("B");
-	/// @inheritdoc ICardinalProtocolGovernance
+	/// @inheritdoc IIglooFiGovernance
 	bytes32 public constant C = keccak256("C");
 
 

@@ -3,10 +3,10 @@ pragma solidity ^0.8.10;
 
 
 /**
-* @title ICardinalProtocolGovernance
+* @title IIglooFiGovernance
 * @author harpoonjs.eth
 */
-interface ICardinalProtocolGovernance 
+interface IIglooFiGovernance 
 {
 	/**
 	* @notice AccessControlEnumerable role

@@ -1,1 +1,5 @@
-{}
+{
+	"goerli": {
+		"IglooFiGovernance":"0x21C2648f32Ac31ec2643708464127192293A625C"
+	}
+}

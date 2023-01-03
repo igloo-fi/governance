@@ -29,12 +29,13 @@ contract IglooFiGovernance is
 	/* [constructor] */
 	constructor ()
 	{
+		_setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
+		_setupRole(S, _msgSender());
+
 		_setRoleAdmin(S, S);
 		_setRoleAdmin(A, S);
 		_setRoleAdmin(B, S);
 		_setRoleAdmin(C, S);
-
-		_setupRole(S, _msgSender());
 	}
 }
 

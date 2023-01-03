@@ -1,5 +1,30 @@
 {
-	"goerli": {
-		"IglooFiGovernance":"0x21C2648f32Ac31ec2643708464127192293A625C"
+	"IglooFiGovernance": {
+		"goerli": {
+			"0x21C2648f32Ac31ec2643708464127192293A625C": {
+				"roles": {
+					"S": {
+						"members": {
+							"0x01208b888908b10089503e4c691fb91863041920": true
+						},
+						"adminRole": "S"
+					},
+					"A": {
+						"members": {
+							"0x96a4bc19e6947b8c4b3fbc47bae0dcb32f0037c8": true
+						},
+						"adminRole": "S"
+					},
+					"B": {
+						"members": {},
+						"adminRole": "S"
+					},
+					"C": {
+						"members": {},
+						"adminRole": "S"
+					}
+				}
+			}
+		}
 	}
 }

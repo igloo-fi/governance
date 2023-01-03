@@ -8,7 +8,7 @@ import "./interface/IIglooFiGovernance.sol";
 
 
 /**
-* @title Igloo Fi Governance
+* @title IglooFiGovernance
 * @author harpoonjs.eth
 */
 contract IglooFiGovernance is

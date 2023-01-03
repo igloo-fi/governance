@@ -10,7 +10,6 @@ import "./interface/IIglooFiGovernance.sol";
 
 /**
 * @title IglooFiGovernance
-* @author harpoonjs.eth
 */
 contract IglooFiGovernance is
 	AccessControlEnumerable,

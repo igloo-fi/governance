@@ -4,12 +4,11 @@ pragma solidity ^0.8.10;
 
 /**
 * @title IIglooFiGovernance
-* @author harpoonjs.eth
 */
 interface IIglooFiGovernance 
 {
 	/**
-	* @notice governanceRoles
+	* @notice Governance Roles
 	*
 	* @dev [!restriction]
 	* @dev [view][mapping]
@@ -23,10 +22,10 @@ interface IIglooFiGovernance
 	;
 
 	/**
-	* @notice Invalid return value for isValidSignature
+	* @notice Adds a role to `_governanceRoles`
 	*
 	* @dev [restriction] AccessControlEnumerable → DEFAULT_ADMIN_ROLE 
-	* @dev [add] `govRoles`
+	* @dev [add] `_governanceRoles`
 	*      [update] `AccessControlEnumerable` → `_roles`
 	*
 	* @param role {string}

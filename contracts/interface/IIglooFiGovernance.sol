@@ -9,30 +9,29 @@ pragma solidity ^0.8.10;
 interface IIglooFiGovernance 
 {
 	/**
-	* @notice AccessControlEnumerable role
-	* @dev [view-bytes32]
-	* @return {bytes32} keccak256 value
+	* @notice governanceRoles
+	*
+	* @dev [!restriction]
+	* @dev [view][mapping]
+	*
+	* @return {bytes32}
 	*/
-	function S() external view returns (bytes32);
+	function governanceRoles(string memory role)
+		external
+		view
+		returns (bytes32)
+	;
 
 	/**
-	* @notice AccessControlEnumerable role
-	* @dev [view-bytes32]
-	* @return {bytes32} keccak256 value
+	* @notice Invalid return value for isValidSignature
+	*
+	* @dev [restriction] AccessControlEnumerable → DEFAULT_ADMIN_ROLE 
+	* @dev [add] `govRoles`
+	*      [update] `AccessControlEnumerable` → `_roles`
+	*
+	* @param role {string}
 	*/
-	function A() external view returns (bytes32);
-
-	/**
-	* @notice AccessControlEnumerable role
-	* @dev [view-bytes32]
-	* @return {bytes32} keccak256 value
-	*/
-	function B() external view returns (bytes32);
-
-	/**
-	* @notice AccessControlEnumerable role
-	* @dev [view-bytes32]
-	* @return {bytes32} keccak256 value
-	*/
-	function C() external view returns (bytes32);
+	function addGovernanceRole(string memory role)
+		external
+	;
 }

@@ -16,25 +16,40 @@ contract IglooFiGovernance is
 	IIglooFiGovernance
 {
 	/* [state-variables] */
-	/// @inheritdoc IIglooFiGovernance
-	bytes32 public constant S = keccak256("S");
-	/// @inheritdoc IIglooFiGovernance
-	bytes32 public constant A = keccak256("A");
-	/// @inheritdoc IIglooFiGovernance
-	bytes32 public constant B = keccak256("B");
-	/// @inheritdoc IIglooFiGovernance
-	bytes32 public constant C = keccak256("C");
+	// [mapping][internal]
+	mapping (string => bytes32) internal _governanceRoles;
 
 
 	/* [constructor] */
 	constructor ()
 	{
-		_setupRole(S, _msgSender());
+		// [add] `_governanceRoles`
+		_governanceRoles["DEFAULT_ADMIN_ROLE"] = DEFAULT_ADMIN_ROLE;
 
-		_setRoleAdmin(S, S);
-		_setRoleAdmin(A, S);
-		_setRoleAdmin(B, S);
-		_setRoleAdmin(C, S);
+		// [add] msg.sender to DEFAULT_ADMIN_ROLE on `AccessControlEnumerable`
+		_setupRole(_governanceRoles["DEFAULT_ADMIN_ROLE"], _msgSender());
+	}
+
+
+	/// @inheritdoc IIglooFiGovernance
+	function governanceRoles(string memory role)
+		public
+		view
+		returns (bytes32)
+	{
+		return _governanceRoles[role];
+	}
+
+	/// @inheritdoc IIglooFiGovernance
+	function addGovernanceRole(string memory role)
+		public
+		onlyRole(_governanceRoles["DEFAULT_ADMIN_ROLE"])
+	{
+		// [add] `_governanceRoles`
+		_governanceRoles[role] = keccak256(abi.encodePacked(role));
+
+		// [update] `AccessControlEnumerable` → `_roles`
+		_setRoleAdmin(_governanceRoles[role], DEFAULT_ADMIN_ROLE);
 	}
 }
 

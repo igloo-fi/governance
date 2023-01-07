@@ -1,27 +1,19 @@
 {
 	"IglooFiGovernance": {
 		"goerli": {
-			"0x21C2648f32Ac31ec2643708464127192293A625C": {
+			"0x20550E54E4Cb1b6E92D72a47AdbA7d1d59646D86": {
 				"roles": {
-					"S": {
+					"DEFAULT_ADMIN_ROLE": {
 						"members": {
 							"0x01208b888908b10089503e4c691fb91863041920": true
 						},
-						"adminRole": "S"
+						"adminRole": "DEFAULT_ADMIN_ROLE"
 					},
-					"A": {
+					"JARL": {
 						"members": {
 							"0x96a4bc19e6947b8c4b3fbc47bae0dcb32f0037c8": true
 						},
-						"adminRole": "S"
-					},
-					"B": {
-						"members": {},
-						"adminRole": "S"
-					},
-					"C": {
-						"members": {},
-						"adminRole": "S"
+						"adminRole": "DEFAULT_ADMIN_ROLE"
 					}
 				}
 			}

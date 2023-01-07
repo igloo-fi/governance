@@ -13,3 +13,10 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+
+## Deploy to Goerli
+
+```shell
+npx hardhat run scripts/deploy_IglooFiGovernance.js --network goerli
+npx hardhat verify --network goerli <deployed contract address>
+```

@@ -2,7 +2,6 @@
 pragma solidity ^0.8.10;
 
 
-/* [import] */
 import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 
 import "./interface/IIglooFiGovernance.sol";
@@ -16,7 +15,7 @@ contract IglooFiGovernance is
 	IIglooFiGovernance
 {
 	/* [state-variables] */
-	// [mapping][internal]
+	// [internal]
 	mapping (string => bytes32) internal _governanceRoles;
 
 

@@ -8,7 +8,7 @@ pragma solidity ^0.8.18;
 interface IYieldSyncGovernance
 {
 	/**
-	* @notice Get
+	* @notice Get roleHash
 	* @dev [!restriction]
 	* @dev [view-mapping]
 	* @return {bytes32}

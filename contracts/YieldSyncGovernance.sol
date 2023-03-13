@@ -15,36 +15,25 @@ contract YieldSyncGovernance is
 	IYieldSyncGovernance
 {
 	// [mapping]
-	mapping (string => bytes32) internal _governanceRoles;
+	mapping (string role => bytes32 roleHash) public role_roleHash;
 
 
 	constructor ()
 	{
-		_governanceRoles["DEFAULT_ADMIN_ROLE"] = DEFAULT_ADMIN_ROLE;
+		role_roleHash["DEFAULT_ADMIN_ROLE"] = DEFAULT_ADMIN_ROLE;
 
-		_setupRole(_governanceRoles["DEFAULT_ADMIN_ROLE"], _msgSender());
-	}
-
-
-	/// @inheritdoc IYieldSyncGovernance
-	function governanceRoles(string memory role)
-		public
-		view
-		override
-		returns (bytes32)
-	{
-		return _governanceRoles[role];
+		_setupRole(role_roleHash["DEFAULT_ADMIN_ROLE"], _msgSender());
 	}
 
 	/// @inheritdoc IYieldSyncGovernance
-	function addGovernanceRole(string memory role)
+	function addRole_roleHash(string memory role)
 		public
 		override
-		onlyRole(_governanceRoles["DEFAULT_ADMIN_ROLE"])
+		onlyRole(role_roleHash["DEFAULT_ADMIN_ROLE"])
 	{
-		_governanceRoles[role] = keccak256(abi.encodePacked(role));
+		role_roleHash[role] = keccak256(abi.encodePacked(role));
 
-		_setRoleAdmin(_governanceRoles[role], DEFAULT_ADMIN_ROLE);
+		_setRoleAdmin(role_roleHash[role], DEFAULT_ADMIN_ROLE);
 	}
 }
 

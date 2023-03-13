@@ -25,6 +25,7 @@ contract YieldSyncGovernance is
 		_setupRole(role_roleHash["DEFAULT_ADMIN_ROLE"], _msgSender());
 	}
 
+
 	/// @inheritdoc IYieldSyncGovernance
 	function addRole_roleHash(string memory role)
 		public

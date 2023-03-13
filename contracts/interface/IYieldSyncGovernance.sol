@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.10;
+pragma solidity ^0.8.18;
 
 
 /**
@@ -23,7 +23,7 @@ interface IYieldSyncGovernance
 	* @notice Adds a role to `_governanceRoles`
 	* @dev [restriction] AccessControlEnumerable → DEFAULT_ADMIN_ROLE 
 	* @dev [add] `_governanceRoles`
-	*      [update] `AccessControlEnumerable` → `_roles`
+	*      [update] `AccessControlEnumerable` → `_role`
 	* @param role {string}
 	*/
 	function addGovernanceRole(string memory role)

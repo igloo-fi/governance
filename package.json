@@ -1,12 +1,12 @@
 {
-  "name": "cardinal",
+  "name": "yield-sync-governance",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/igloo-fi/governance.git"
+    "url": "git+https://github.com/yield-sync/governance.git"
   },
   "keywords": [],
   "author": "harpoonjs.eth",

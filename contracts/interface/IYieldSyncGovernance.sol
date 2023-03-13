@@ -3,9 +3,9 @@ pragma solidity ^0.8.10;
 
 
 /**
-* @title IIglooFiGovernance
+* @title IYieldSyncGovernance
 */
-interface IIglooFiGovernance 
+interface IYieldSyncGovernance 
 {
 	/**
 	* @notice Governance Roles

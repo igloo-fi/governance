@@ -5,13 +5,13 @@ async function main() {
 
 	console.log(`Deploying contracts with the account: ${deployer.address}`);
 
-	const IglooFiGovernance = await ethers.getContractFactory(
-		'IglooFiGovernance'
+	const YieldSyncGovernance = await ethers.getContractFactory(
+		'YieldSyncGovernance'
 	);
 
-	const iglooFiGovernance = await IglooFiGovernance.deploy();
+	const yieldSyncGovernance = await YieldSyncGovernance.deploy();
 
-	console.log(`Contract address: ${iglooFiGovernance.address}`);
+	console.log(`Contract address: ${yieldSyncGovernance.address}`);
 }
 
 main()

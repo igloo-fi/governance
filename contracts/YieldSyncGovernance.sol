@@ -4,15 +4,15 @@ pragma solidity ^0.8.10;
 
 import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 
-import "./interface/IIglooFiGovernance.sol";
+import "./interface/IYieldSyncGovernance.sol";
 
 
 /**
-* @title IglooFiGovernance
+* @title YieldSyncGovernance
 */
-contract IglooFiGovernance is
+contract YieldSyncGovernance is
 	AccessControlEnumerable,
-	IIglooFiGovernance
+	IYieldSyncGovernance
 {
 	/* [state-variables] */
 	// [internal]
@@ -30,7 +30,7 @@ contract IglooFiGovernance is
 	}
 
 
-	/// @inheritdoc IIglooFiGovernance
+	/// @inheritdoc IYieldSyncGovernance
 	function governanceRoles(string memory role)
 		public
 		view
@@ -39,7 +39,7 @@ contract IglooFiGovernance is
 		return _governanceRoles[role];
 	}
 
-	/// @inheritdoc IIglooFiGovernance
+	/// @inheritdoc IYieldSyncGovernance
 	function addGovernanceRole(string memory role)
 		public
 		onlyRole(_governanceRoles["DEFAULT_ADMIN_ROLE"])
@@ -54,16 +54,10 @@ contract IglooFiGovernance is
 
 
 /*
-*    ___________   ____  ____    ________
-*   /  _/ ___/ /  / __ \/ __ \  / __/  _/
-*  _/ // (_ / /__/ /_/ / /_/ / / _/_/ /  
-* /___/\___/____/\____/\____/ /_/ /___/  
-*                                        
-*        ⢀⣤⣴⡆⢰⣶⣤⣀
-*       ⠚⠛⠛⠛⠃⠘⠛⠛⠛⠛⠂
-*    ⣠⣾⣿⠏⢠⣾⣿⣿⣿⣿⣿⣦⠈⢿⣿⣦
-*   ⠐⠛⠛⠛ ⠛⠛⠛⠛⠛⠛⠛⠛⠃⠘⠛⠛⠓
-*  ⢰⠇⣾⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⠏⣰⣿⣿⡏⢠⣾⣿⡟⠁⠸⣷
-*  ⣉⣀⣉⣉⣉⠉⣉⣉⣉⣁⣈⣉⣉⡉ ⣉⣉⣉ ⣈⣉⣉    ⣿⡇
-* ⠸⠿⠿⠿⠿⠿ ⠿⠿⠿⠿⠿⠿⠿⠟ ⠿⠿⠿ ⠿⠿⠿    ⠻⠇
+* __  ___      __    __   _____                 
+* \ \/ (_)__  / /___/ /  / ___/__  ______  _____
+*  \  / / _ \/ / __  /   \__ \/ / / / __ \/ ___/
+*  / / /  __/ / /_/ /   ___/ / /_/ / / / / /__  
+* /_/_/\___/_/\__,_/   /____/\__, /_/ /_/\___/  
+*                           /____/              
 */

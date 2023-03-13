@@ -17,6 +17,6 @@ npx hardhat help
 ## Deploy to Goerli
 
 ```shell
-npx hardhat run scripts/deploy_IglooFiGovernance.js --network goerli
+npx hardhat run scripts/deploy_YieldSyncGovernance.js --network goerli
 npx hardhat verify --network goerli <deployed contract address>
 ```
